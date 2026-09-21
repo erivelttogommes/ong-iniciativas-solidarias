@@ -94,6 +94,11 @@ button, input { font: inherit; }
     background: rgba(255,255,255,.12);
 }
 
+.menu a:focus, .dropdown-botao:focus {
+    outline: 3px solid #F59E0B;
+    outline-offset: 2px;
+}
+
 .menu a:focus-visible,
 .dropdown-botao:focus-visible,
 .botao:focus-visible,
