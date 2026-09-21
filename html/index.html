@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG - Iniciativas Solidárias</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="cabecalho">
+    <div class="topo">
+        <a class="logo" href="#inicio">Iniciativas Solidárias</a>
+
+        <button class="menu-botao" id="menuBotao"
+            aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="menuPrincipal">☰</button>
+
+        <nav class="menu" id="menuPrincipal">
+            <a href="#inicio">Início</a>
+
+            <div class="dropdown">
+                <button class="dropdown-botao">Projetos ▾</button>
+                <div class="dropdown-conteudo">
+                    <a href="#doacao">Doação</a>
+                    <a href="#voluntariado">Voluntariado</a>
+                    <a href="#campanhas">Campanhas</a>
+                </div>
+            </div>
+
+            <a href="#cadastro">Cadastro</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-texto">
+            <span class="badge destaque">ONG ATIVA</span>
+            <h1>Iniciativas que transformam realidades</h1>
+            <p>Uma plataforma para divulgar projetos, captar recursos e aproximar voluntários.</p>
+            <button class="botao botao-principal" id="abrirModal">Quero participar</button>
+        </div>
+        <img src="../imagens/imagem.png"
+            alt="Mãos de pessoas segurando um coração vermelho, simbolizando solidariedade e apoio às iniciativas da ONG.">
+    </section>
+
+    <section class="grade-cards" aria-label="Projetos da ONG">
+        <article class="card" id="doacao">
+            <span class="badge">Disponível</span>
+            <h2>Doação</h2>
+            <p>Contribua financeiramente para apoiar nossas iniciativas solidárias.</p>
+            <button class="botao">Contribuir</button>
+        </article>
+
+        <article class="card" id="voluntariado">
+            <span class="badge">Aberto</span>
+            <h2>Voluntariado</h2>
+            <p>Participe como voluntário e ajude no desenvolvimento dos projetos.</p>
+            <button class="botao">Ser voluntário</button>
+        </article>
+
+        <article class="card" id="campanhas">
+            <span class="badge">Ativa</span>
+            <h2>Campanhas</h2>
+            <p>Acompanhe campanhas de apoio à comunidade e suas oportunidades.</p>
+            <button class="botao">Ver campanha</button>
+        </article>
+    </section>
+
+    <section class="alerta" role="alert">
+        <strong>Atenção!</strong>
+        Preencha todos os campos obrigatórios no cadastro.
+    </section>
+
+    <section class="formulario-secao" id="cadastro">
+        <h2>Cadastro de voluntário</h2>
+
+        <form id="formCadastro" novalidate>
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" required minlength="3">
+                <small class="mensagem-campo"></small>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+                <small class="mensagem-campo"></small>
+            </div>
+
+            <button class="botao botao-principal" type="submit">Cadastrar</button>
+            <p id="mensagemFormulario" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Fale conosco</h2>
+        <p>Telefone: <strong>21-99988-8777</strong></p>
+    </section>
+</main>
+
+<footer>
+    <p>ONG - Iniciativas Solidárias</p>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"
+     aria-labelledby="tituloModal" hidden>
+    <div class="modal-conteudo">
+        <button class="fechar" id="fecharModal" aria-label="Fechar">×</button>
+        <h2 id="tituloModal">Participe da nossa ONG</h2>
+        <p>Você pode contribuir através de doações ou trabalho voluntário.</p>
+        <button class="botao" id="confirmarModal">Entendi</button>
+    </div>
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
